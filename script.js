@@ -13,6 +13,7 @@ function setup()
     }
   }
 }
+///
 function draw()
 {
     tablaDeJoc();
