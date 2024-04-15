@@ -1,10 +1,30 @@
+let matrice=[];
+let dimensiuneBloc=98.8; 
+let coordonatePunctStart=103;
 function setup()
 {
     createCanvas(700,700);
+  for(i=1;i<=4;i++)
+  {
+    matrice[i]=[];
+  for(j=1;j<=4;j++)
+    {
+      matrice[i][j]=0;
+    }
+  }
 }
 function draw()
 {
     tablaDeJoc();
+  for(i=1;i<=5;i++)
+  {
+  for(j=1;j<=5;j++)
+    {
+     let x=coordonatePunctStart+(i-1)*dimensiuneBloc;
+      let y=coordonatePunctStart+(j-1)*dimensiuneBloc;
+      rect(x,y,dimensiuneBloc,dimensiuneBloc);
+    }
+  }
 }
 function tablaDeJoc()
 {
