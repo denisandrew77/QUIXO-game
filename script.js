@@ -1,19 +1,24 @@
 let matrice=[];
 let dimensiuneBloc=98.8; 
 let coordonatePunctStart=103;
+
 function setup()
 {
     createCanvas(700,700);
-  for(i=1;i<=4;i++)
+  for(i=1;i<=5;i++)
   {
     matrice[i]=[];
-  for(j=1;j<=4;j++)
+  for(j=1;j<=5;j++)
     {
-      matrice[i][j]=0;
+      matrice[i][j]={
+        valoare:0,
+        coordonataX:coordonatePunctStart+(i-1)*dimensiuneBloc,
+        coordonataY:coordonatePunctStart+(j-1)*dimensiuneBloc,
+        dimensiuneBloc:98.8
+      }
     }
   }
 }
-///
 function draw()
 {
     tablaDeJoc();
@@ -26,7 +31,7 @@ function draw()
       rect(x,y,dimensiuneBloc,dimensiuneBloc);
     }
   }
-}
+} 
 function tablaDeJoc()
 {
     background("white");
