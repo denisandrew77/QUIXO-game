@@ -2,12 +2,24 @@ let matrice = [];
 let dimensiuneBloc = 98.8;
 let coordonatePunctStart = 103;
 let buton;
+let caseta1, caseta2;
 
 function setup() {
   createCanvas(900, 700);
   buton = createButton('Joc Nou');
   buton.position(750, 20);
   buton.mousePressed(resetareJoc);
+
+  caseta1 = createInput();
+  caseta1.position(750, 80);
+  caseta1.attribute('placeholder', 'Jucătorul 1');
+  caseta1.size(120, 20);
+
+  caseta2 = createInput();
+  caseta2.position(750, 130);
+  caseta2.attribute('placeholder', 'Jucătorul 2');
+  caseta2.size(120, 20);
+
   resetareJoc();
 }
 
@@ -17,12 +29,14 @@ function resetareJoc() {
     for (j = 1; j <= 5; j++) {
       matrice[i][j] = {
         valoare: 0,
-        coordonataX: coordonatePunctStart + (i - 1) * dimensiuneBloc,
-        coordonataY: coordonatePunctStart + (j - 1) * dimensiuneBloc,
+        coordonataY: coordonatePunctStart + (i - 1) * dimensiuneBloc,
+        coordonataX: coordonatePunctStart + (j - 1) * dimensiuneBloc,
         dimensiuneBloc: 98.8
       }
     }
   }
+  caseta1.value('');
+  caseta2.value('');
 }
 
 function mousePressed() {
@@ -36,6 +50,8 @@ function mousePressed() {
 }
 
 function draw() {
+  casetaJucatorul1();
+  casetaJucatorul2();
   butonJocNou();
   tablaDeJoc();
   for (i = 1; i <= 5; i++) {
@@ -67,4 +83,22 @@ function butonJocNou() {
   buton.style('border', '5px');
   buton.style('text-align', 'center');
   buton.style('cursor', 'pointer');
+}
+
+function casetaJucatorul1() {
+  caseta1.style('background-color', '#D6A797');
+  caseta1.style('font-size', '20px');
+  caseta1.style('padding', '10px');
+  caseta1.style('border', '5px');
+  caseta1.style('text-align', 'left');
+  caseta1.style('cursor', 'text');
+}
+
+function casetaJucatorul2() {
+  caseta2.style('background-color', '#D6A797');
+  caseta2.style('font-size', '20px');
+  caseta2.style('padding', '10px');
+  caseta2.style('border', '5px');
+  caseta2.style('text-align', 'left');
+  caseta2.style('cursor', 'text');
 }
