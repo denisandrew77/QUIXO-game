@@ -227,7 +227,7 @@ function draw() {
   casetaJucatorul2();
   butonJocNou();
   tablaDeJoc();
-  let a=0;
+  let a=1;
   for (i = 1; i <= 5; i++) 
   {
     for (j = 1; j <= 5; j++) 
