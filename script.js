@@ -30,8 +30,7 @@ function resetareJoc() {
       matrice[i][j] = {
         valoare: 0,
         coordonataY: coordonatePunctStart + (i - 1) * dimensiuneBloc,
-        coordonataX: coordonatePunctStart + (j - 1) * dimensiuneBloc,
-        dimensiuneBloc: 98.8
+        coordonataX: coordonatePunctStart + (j - 1) * dimensiuneBloc
       }
     }
   }
