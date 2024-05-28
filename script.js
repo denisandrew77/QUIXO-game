@@ -49,174 +49,45 @@ function mousePressed()
         //1,1
       if(mouseX>=matrice[1][1].coordonataX && mouseX<=matrice[1][1].coordonataX+dimensiuneBloc && mouseY>=matrice[1][1].coordonataY && mouseY<=matrice[1][1].coordonataY+dimensiuneBloc)
         {
-          for(let u=2;u<=5;u++)
-            {
-              if(matrice[1][u].valoare==1)
-                {
-                  matrice[1][u].valoare=0;
-                  matrice[1][1].valoare=2;
-                  break outerloop;
-                }
-              else if(matrice[u][1].valoare==1)
-                {
-                  matrice[u][1].valoare=0;
-                  matrice[1][1].valoare=2;
-                  break outerloop;
-                }
-            }
+          ifSquare11();
         }
       ///5,1
       else if(mouseX>=matrice[5][1].coordonataX && mouseX<=matrice[5][1].coordonataX+dimensiuneBloc && mouseY>=matrice[5][1].coordonataY && mouseY<=matrice[5][1].coordonataY+dimensiuneBloc)
         {
-         for(let u=1;u<=4;u++)
-           {
-             if(matrice[u][1].valoare==1)
-               {
-                 matrice[u][1].valoare=0;
-                 matrice[5][1].valoare=2;
-                 break outerloop;
-               }
-             else if(matrice[5][u+1].valoare==1)
-               {
-                 matrice[5][u+1].valoare=0;
-                 matrice[5][1].valoare=2;
-                 break outerloop;
-               }
-           }
+          ifSquare51();
         }
       ///1,5
       else if(mouseX>=matrice[1][5].coordonataX && mouseX<=matrice[1][5].coordonataX+dimensiuneBloc && mouseY>=matrice[1][5].coordonataY && mouseY<=matrice[1][5].coordonataY+dimensiuneBloc)
         {
-          for(let u=1;u<=4;u++)
-            {
-              if(matrice[1][u].valoare==1)
-                {
-                  matrice[1][u].valoare=0;
-                  matrice[1][5].valoare=2;
-                  break outerloop;
-                }
-              else if(matrice[u+1][5].valoare==1)
-                {
-                  matrice[u+1][5].valoare=0;
-                  matrice[1][5].valoare=2;
-                  break outerloop;
-                }
-            }
+          ifSquare15();
         }
       ///5,5
       else if(mouseX>=matrice[5][5].coordonataX && mouseX<=matrice[5][5].coordonataX+dimensiuneBloc && mouseY>=matrice[5][5].coordonataY && mouseY<+matrice[5][5].coordonataY+dimensiuneBloc )
         {
-          for(let u=1;u<=4;u++)
-            {
-              if(matrice[5][u].valoare==1)
-                {
-                  matrice[5][u].valoare=0;
-                  matrice[5][5].valoare=2;
-                  break outerloop;
-                }
-              else if(matrice[u][5].valoare==1)
-                {
-                  matrice[u][5].valoare=0;
-                  matrice[5][5].valoare=2;
-                  break outerloop;
-                }
-            }
+          ifSquare55();
         }
       ///i==1
       else if(mouseY>=matrice[1][2].coordonataY && mouseY<=matrice[2][2].coordonataY)
         {
-          if(mouseX>=matrice[1][2].coordonataX && mouseX<=matrice[1][3].coordonataX && matrice[5][2].valoare==1)
-            {
-              matrice[5][2].valoare=0;
-              matrice[1][2].valoare=2;
-            }
-          else if(mouseX>=matrice[1][3].coordonataX && mouseX<=matrice[1][4].coordonataX && matrice[5][3].valoare==1)
-            {
-              matrice[5][3].valoare=0;
-              matrice[1][3].valoare=2;
-            }
-          else if(mouseX>=matrice[1][4].coordonataX && mouseX<=matrice[1][5].coordonataX && matrice[5][4].valoare==1)
-            {
-              matrice[5][4].valoare=0;
-              matrice[1][4].valoare=2;
-            }
+          ifRow1();
         }
       ///i==5
       else if(mouseY>=matrice[5][1].coordonataY && mouseY<=matrice[5][1].coordonataY+dimensiuneBloc)
         {
-          if(mouseX>=matrice[5][2].coordonataX && mouseX<=matrice[5][3].coordonataX && matrice[1][2].valoare==1)
-            {
-              matrice[1][2].valoare=0;
-              matrice[5][2].valoare=2;
-            }
-          else if(mouseX>=matrice[5][3].coordonataX && mouseX<=matrice[5][4].coordonataX && matrice[1][3].valoare==1)
-            {
-              matrice[1][3].valoare=0;
-              matrice[5][3].valoare=2;
-            }
-          else if(mouseX>=matrice[5][4].coordonataX && mouseX<=matrice[5][5].coordonataX && matrice[1][4].valoare==1)
-            {
-              matrice[1][4].valoare=0;
-              matrice[5][4].valoare=2;
-            }
+          ifRow5();
         }
       ///j==1
       else if(mouseX>=matrice[2][1].coordonataX && mouseX<=matrice[2][2].coordonataX)
         {
-          if(mouseY>=matrice[2][1].coordonataY && mouseY<=matrice[3][1].coordonataY && matrice[2][5].valoare==1)
-            {
-              matrice[2][5].valoare=0;
-              matrice[2][1].valoare=2;
-            }
-          else if(mouseY>=matrice[3][1].coordonataY && mouseY<=matrice[4][1].coordonataY && matrice[3][5].valoare==1)
-            {
-              matrice[3][5].valoare=0;
-              matrice[3][1].valoare=2;
-            }
-          else if(mouseY>=matrice[4][1].coordonataY && mouseY<=matrice[5][1].coordonataY && matrice[4][5].valoare==1)
-            {
-              matrice[4][5].valoare=0;
-              matrice[4][1].valoare=2;
-            }
+          ifColumn1();
         }
       ///j==5
       else if(mouseX>=matrice[2][5].coordonataX && mouseX<=matrice[2][5].coordonataX+dimensiuneBloc)
         {
-          if(mouseY>=matrice[2][5].coordonataY && mouseY<=matrice[3][5].coordonataY && matrice[2][1].valoare==1)
-            {
-              matrice[2][1].valoare=0;
-              matrice[2][5].valoare=2;
-            }
-          else if(mouseY>=matrice[3][5].coordonataY && mouseY<=matrice[4][5].coordonataY && matrice[3][1].valoare==1)
-            {
-              matrice[3][1].valoare=0;
-              matrice[3][5].valoare=2;
-            }
-          else if(mouseY>=matrice[4][5].coordonataY && mouseY<=matrice[5][5].coordonataY && matrice[4][1].valoare==1)
-            {
-              matrice[4][1].valoare=0;
-              matrice[4][5].valoare=2;
-            }
+          ifColumn5();
         }
       /// untouched box
-        let a=0;
-        if(matrice[i][j].valoare==0)
-          {
-            for (k = 1; k <= 5; k++) 
-            {
-                for (m = 1; m <= 5; m++) 
-                {
-                  if(matrice[k][m].valoare==1)
-                    {
-                      a++;
-                    }
-                }
-            }
-            if(a==0)
-              {
-                matrice[i][j].valoare=1;
-              }
-          }
+        untouchedBox();
       }
     }
   }
@@ -279,22 +150,4 @@ function butonJocNou() {
   buton.style('border', '5px');
   buton.style('text-align', 'center');
   buton.style('cursor', 'pointer');
-}
-
-function casetaJucatorul1() {
-  caseta1.style('background-color', '#D6A797');
-  caseta1.style('font-size', '20px');
-  caseta1.style('padding', '10px');
-  caseta1.style('border', '5px');
-  caseta1.style('text-align', 'left');
-  caseta1.style('cursor', 'text');
-}
-
-function casetaJucatorul2() {
-  caseta2.style('background-color', '#D6A797');
-  caseta2.style('font-size', '20px');
-  caseta2.style('padding', '10px');
-  caseta2.style('border', '5px');
-  caseta2.style('text-align', 'left');
-  caseta2.style('cursor', 'text');
 }
