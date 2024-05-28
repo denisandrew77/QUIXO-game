@@ -63,6 +63,7 @@ function ifSquare55()
             }
         }
 }
+// verify if we have a selected square in the designated spot for rows and columns
 function ifRow1()
 {
   if(mouseX>=matrice[1][2].coordonataX && mouseX<=matrice[1][3].coordonataX && matrice[5][2].valoare==1)
