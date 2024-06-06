@@ -3,6 +3,7 @@ let dimensiuneBloc = 98.8;
 let coordonatePunctStart = 103;
 let buton;
 let caseta1, caseta2;
+let alternare = 1;
 
 function setup() {
   createCanvas(900, 700);
@@ -34,6 +35,7 @@ function resetareJoc() {
       }
     }
   }
+  alternare = 0;
   caseta1.value('');
   caseta2.value('');
 }
@@ -98,7 +100,6 @@ function draw() {
   casetaJucatorul2();
   butonJocNou();
   tablaDeJoc();
-  let a=1;
   for (i = 1; i <= 5; i++) 
   {
     for (j = 1; j <= 5; j++) 
@@ -108,7 +109,7 @@ function draw() {
         fill("red");
         rect(matrice[i][j].coordonataX, matrice[i][j].coordonataY, dimensiuneBloc, dimensiuneBloc);
       }
-      else if(matrice[i][j].valoare==2 && a%2==0)
+      else if(matrice[i][j].valoare==2)
         {
           fill("rgb(177,54,54)"); 
           rect(matrice[i][j].coordonataX, matrice[i][j].coordonataY, dimensiuneBloc, dimensiuneBloc);
@@ -116,7 +117,7 @@ function draw() {
           circle(matrice[i][j].coordonataX+dimensiuneBloc/2,matrice[i][j].coordonataY+dimensiuneBloc/2,60);
           strokeWeight(1);
         }
-      else if(matrice[i][j].valoare==2 && a%2!=0)
+      else if(matrice[i][j].valoare==3 )
               {
               fill("rgb(177,54,54)");
               strokeWeight(1);
@@ -131,7 +132,6 @@ function draw() {
         fill(232, 189, 124);
         rect(matrice[i][j].coordonataX, matrice[i][j].coordonataY, dimensiuneBloc, dimensiuneBloc);
       }
-      a++;
     }
   }
 }
