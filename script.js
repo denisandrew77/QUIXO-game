@@ -48,6 +48,8 @@ function mousePressed()
     {
       if ((i == 1 || i == 5 || j == 1 || j == 5) && mouseX >= matrice[i][j].coordonataX && mouseX <= matrice[i][j].coordonataX + dimensiuneBloc && mouseY >= matrice[i][j].coordonataY && mouseY <= matrice[i][j].coordonataY + dimensiuneBloc) 
       {
+        /// untouched box
+        untouchedBox();
         //1,1
       if(mouseX>=matrice[1][1].coordonataX && mouseX<=matrice[1][1].coordonataX+dimensiuneBloc && mouseY>=matrice[1][1].coordonataY && mouseY<=matrice[1][1].coordonataY+dimensiuneBloc)
         {
@@ -88,8 +90,6 @@ function mousePressed()
         {
           ifColumn5();
         }
-      /// untouched box
-        untouchedBox();
       }
     }
   }
@@ -127,8 +127,26 @@ function draw() {
               line(matrice[i][j].coordonataX+20,matrice[i][j].coordonataY+20,matrice[i][j].coordonataX+dimensiuneBloc-20,matrice[i][j].coordonataY+dimensiuneBloc-20);
   line(matrice[i][j].coordonataX+20,matrice[i][j].coordonataY+dimensiuneBloc-20,matrice[i][j].coordonataX+dimensiuneBloc-20,matrice[i][j].coordonataY+20);
                 strokeWeight(1);
-
               }
+              else if(matrice[i][j].valoare==5)
+                {
+                  fill("rgb(135,35,15)"); 
+                  rect(matrice[i][j].coordonataX, matrice[i][j].coordonataY, dimensiuneBloc, dimensiuneBloc);
+                  strokeWeight(5);
+                  circle(matrice[i][j].coordonataX+dimensiuneBloc/2,matrice[i][j].coordonataY+dimensiuneBloc/2,60);
+                  strokeWeight(1);
+                }
+              else if(matrice[i][j].valoare==4)
+                      {
+                      fill("rgb(135,35,15)");
+                      strokeWeight(1);
+                      rect(matrice[i][j].coordonataX,matrice[i][j].coordonataY,dimensiuneBloc,dimensiuneBloc);
+                      strokeWeight(5);
+                      line(matrice[i][j].coordonataX+20,matrice[i][j].coordonataY+20,matrice[i][j].coordonataX+dimensiuneBloc-20,matrice[i][j].coordonataY+dimensiuneBloc-20);
+          line(matrice[i][j].coordonataX+20,matrice[i][j].coordonataY+dimensiuneBloc-20,matrice[i][j].coordonataX+dimensiuneBloc-20,matrice[i][j].coordonataY+20);
+                        strokeWeight(1);
+                      }
+              
       else {
         fill(232, 189, 124);
         rect(matrice[i][j].coordonataX, matrice[i][j].coordonataY, dimensiuneBloc, dimensiuneBloc);

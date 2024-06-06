@@ -4,6 +4,7 @@ let elementVerifier=true;
 //function for returning the line with 5 X or 5 0 combination
 function verifyLines()
 {
+  
   for(let i=1;i<=5;i++)
     {
         for(let j=1;j<=5;j++)
