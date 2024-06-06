@@ -3,8 +3,111 @@ let dimensiuneBloc = 98.8;
 let coordonatePunctStart = 103;
 let buton;
 let caseta1, caseta2;
-let alternare = 1;
-
+let butonJocRandom;
+let alternare=1;
+let castig;
+const functieVerificareCombinatieCastigatorare=function ()
+{
+  let verifyX=0;
+  let verify0=0;
+  for(let i=1;i<=5;i++)
+    {
+        for(let j=1;j<=5;j++)
+        {
+          if(matrice[i][j].valoare==2)
+            {
+              verifyX++;
+            }
+          else if(matrice[i][j].valoare==3)
+            {
+              verify0++;
+            }
+        }
+        if(verifyX==5)
+          {
+            return 2;
+          }
+        else if(verify0==5)
+          {
+            return 3;
+          }
+          verifyX=0;
+          verify0=0;
+    }
+    for(let i=1;i<=5;i++)
+        {
+            for(let j=1;j<=5;j++)
+            {
+              if(matrice[j][i].valoare==2)
+                {
+                  verifyX++;
+                }
+              else if(matrice[j][i].valoare==3)
+                {
+                  verify0++;
+                }
+            }
+            if(verifyX==5)
+              {
+                return 2;
+              }
+            else if(verify0==5)
+              {
+                return 3;
+              }
+              verifyX=0;
+              verify0=0;
+        }
+        let i=1;
+        let j=1;
+  while(i<=5 && j<=5)
+  {
+    if(matrice[i][j].valoare==2)
+      {
+        verifyX++;
+      }
+    else if(matrice[i][j].valoare==3)
+      {
+        verify0++;
+      }
+      i++;
+      j++;
+  }
+  if(verifyX==5)
+    {
+      return 2;
+    }
+  else if(verify0==5)
+    {
+      return 3;
+    }
+    verifyX=0;
+    verify0=0;
+    i=1;
+    j=1;
+    while(i>=1 && j>=1)
+        {
+          if(matrice[i][j].valoare==2)
+            {
+              verifyX++;
+            }
+          else if(matrice[i][j].valoare!=3)
+            {
+              verify0++;
+            }
+            i++;
+            j--;
+        }
+        if(verifyX==2)
+          {
+            return 2;
+          }
+        else if(verify0==3)
+          {
+            return 3;
+          }
+    return 0;
+}
 function setup() {
   createCanvas(900, 700);
   buton = createButton('Joc Nou');
@@ -37,7 +140,6 @@ function resetareJoc() {
       }
     }
   }
-  alternare = 0;
   caseta1.value('');
   caseta2.value('');
   alternare=0;
@@ -105,10 +207,7 @@ function draw() {
   casetaJucatorul2();
   butonJocNou();
   tablaDeJoc();
-<<<<<<< HEAD
-=======
   
->>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
   for (i = 1; i <= 5; i++) 
   {
     for (j = 1; j <= 5; j++) 
@@ -118,11 +217,7 @@ function draw() {
         fill("red");
         rect(matrice[i][j].coordonataX, matrice[i][j].coordonataY, dimensiuneBloc, dimensiuneBloc);
       }
-<<<<<<< HEAD
-      else if(matrice[i][j].valoare==2)
-=======
       else if(matrice[i][j].valoare==3)
->>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
         {
           fill("rgb(177,54,54)"); 
           rect(matrice[i][j].coordonataX, matrice[i][j].coordonataY, dimensiuneBloc, dimensiuneBloc);
@@ -130,11 +225,7 @@ function draw() {
           circle(matrice[i][j].coordonataX+dimensiuneBloc/2,matrice[i][j].coordonataY+dimensiuneBloc/2,60);
           strokeWeight(1);
         }
-<<<<<<< HEAD
-      else if(matrice[i][j].valoare==3 )
-=======
       else if(matrice[i][j].valoare==2)
->>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
               {
               fill("rgb(177,54,54)");
               strokeWeight(1);
