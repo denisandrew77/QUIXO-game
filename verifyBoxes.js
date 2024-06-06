@@ -5,6 +5,7 @@ function ifSquare11()
         {
           if(matrice[1][u].valoare==1)
             {
+<<<<<<< HEAD
               matrice[1][u].valoare=0;
               if (alternare%2 == 0)
                 {
@@ -15,9 +16,48 @@ function ifSquare11()
                     matrice[1][1].valoare=3;
                   }
                   alternare++;
+=======
+              if (alternare%2 == 0)
+                {
+                  for(let coloana=u;coloana>=2;coloana--)
+                    {
+                      matrice[1][coloana].valoare=matrice[1][coloana-1].valoare;
+                    }
+                  matrice[1][1].valoare=2;
+                  alternare++;
+                }
+                else if (alternare%2 != 0)
+                  {
+                    for(let coloana=u;coloana>=2;coloana--)
+                      {
+                        matrice[1][coloana].valoare=matrice[1][coloana-1].valoare;
+                      }
+                    matrice[1][1].valoare=3;
+                    alternare++;
+                  }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
             }
+            else if(matrice[1][u].valoare==4)
+              {
+                for(let coloana=u;coloana>=2;coloana--)
+                  {
+                    matrice[1][coloana].valoare=matrice[1][coloana-1].valoare;
+                  }
+                  matrice[1][1].valoare=2;
+                  alternare++;
+              }
+              else if(matrice[1][u].valoare==5)
+                {
+                  for(let coloana=u;coloana>=2;coloana--)
+                    {
+                      matrice[1][coloana].valoare=matrice[1][coloana-1].valoare;
+                    }
+                    matrice[1][1].valoare=3;
+                    alternare++;
+                }
           else if(matrice[u][1].valoare==1)
             {
+<<<<<<< HEAD
               matrice[u][1].valoare=0;
               if (alternare%2 == 0)
                 {
@@ -29,6 +69,45 @@ function ifSquare11()
                   }
                   alternare++;
             }
+=======
+              if (alternare%2 == 0)
+                {
+                  for(let linia=u;linia>=2;linia--)
+                    {
+                      matrice[linia][1].valoare=matrice[linia-1][1].valoare;
+                    }
+                  matrice[1][1].valoare=2;
+                  alternare++;
+                }
+                else if (alternare%2 != 0)
+                  {
+                    for(let linia=u;linia>=2;linia--)
+                    {
+                      matrice[linia][1].valoare=matrice[linia-1][1].valoare;
+                    }
+                    matrice[1][1].valoare=3;
+                    alternare++;
+                  }
+            }
+            else if(matrice[u][1].valoare==4)
+              {
+                for(let linia=u;linia>=2;linia--)
+                  {
+                    matrice[linia][1].valoare=matrice[linia-1][1].valoare;
+                  }
+                matrice[1][1].valoare=2;
+                alternare++;
+              }
+              else if(matrice[u][1].valoare==5)
+                {
+                  for(let linia=u;linia>=2;linia--)
+                    {
+                      matrice[linia][1].valoare=matrice[linia-1][1].valoare;
+                    }
+                  matrice[1][1].valoare=3;
+                  alternare++;
+                }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
             
         }
 }
@@ -38,6 +117,7 @@ function ifSquare51()
         {
           if(matrice[u][1].valoare==1)
             {
+<<<<<<< HEAD
               matrice[u][1].valoare=0;
               if (alternare%2 == 0)
                 {
@@ -48,9 +128,48 @@ function ifSquare51()
                     matrice[5][1].valoare=3;
                   }
                   alternare++;
+=======
+              if (alternare%2 == 0)
+                {
+                  for(let linia=u;linia<=4;linia++)
+                    {
+                      matrice[linia][1].valoare=matrice[linia+1][1].valoare;
+                    }
+                  matrice[5][1].valoare=2;
+                  alternare++;
+                }
+                else if (alternare%2 != 0)
+                  {
+                    for(let linia=u;linia<=4;linia++)
+                      {
+                        matrice[linia][1].valoare=matrice[linia+1][1].valoare;
+                      }
+                    matrice[5][1].valoare=3;
+                    alternare++;
+                  }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
             }
+            else if(matrice[u][1].valoare==4)
+              {
+                for(let linia=u;linia<=4;linia++)
+                  {
+                    matrice[linia][1].valoare=matrice[linia+1][1].valoare;
+                  }
+                matrice[5][1].valoare=2;
+                alternare++;
+              }
+              else if(matrice[u][1].valoare==5)
+                {
+                  for(let linia=u;linia<=4;linia++)
+                    {
+                      matrice[linia][1].valoare=matrice[linia+1][1].valoare;
+                    }
+                  matrice[5][1].valoare=3;
+                  alternare++;
+                }
           else if(matrice[5][u+1].valoare==1)
             {
+<<<<<<< HEAD
               matrice[5][u+1].valoare=0;
               if (alternare%2 == 0)
                 {
@@ -61,7 +180,45 @@ function ifSquare51()
                     matrice[5][1].valoare=3;
                   }
                   alternare++;
+=======
+              if (alternare%2 == 0)
+                {
+                  for(let coloana=u+1;coloana>=2;coloana--)
+                    {
+                      matrice[5][coloana].valoare=matrice[5][coloana-1].valoare;
+                    }
+                  matrice[5][1].valoare=2;
+                  alternare++;
+                }
+                else if (alternare%2 != 0)
+                  {
+                    for(let coloana=u+1;coloana>=2;coloana--)
+                      {
+                        matrice[5][coloana].valoare=matrice[5][coloana-1].valoare;
+                      }
+                    matrice[5][1].valoare=3;
+                    alternare++;
+                  }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
             }
+            else if(matrice[5][u+1].valoare==4)
+              {
+                for(let coloana=u+1;coloana>=2;coloana--)
+                  {
+                    matrice[5][coloana].valoare=matrice[5][coloana-1].valoare;
+                  }
+                matrice[5][1].valoare=2;
+                alternare++;
+              }
+              else if(matrice[5][u+1].valoare==5)
+                {
+                  for(let coloana=u+1;coloana>=2;coloana--)
+                    {
+                      matrice[5][coloana].valoare=matrice[5][coloana-1].valoare;
+                    }
+                  matrice[5][1].valoare=3;
+                  alternare++;
+                }
         }
 }
 function ifSquare15()
@@ -70,6 +227,7 @@ function ifSquare15()
         {
           if(matrice[1][u].valoare==1)
             {
+<<<<<<< HEAD
               matrice[1][u].valoare=0;
               if (alternare%2 == 0)
                 {
@@ -80,9 +238,48 @@ function ifSquare15()
                     matrice[1][5].valoare=3;
                   }
                   alternare++;
+=======
+              if (alternare%2 == 0)
+                {
+                  for(let coloana=u;coloana<=4;coloana++)
+                    {
+                      matrice[1][coloana].valoare=matrice[1][coloana+1].valoare;
+                    }
+                  matrice[1][5].valoare=2;
+                  alternare++;
+                }
+                else if (alternare%2 != 0)
+                  {
+                    for(let coloana=u;coloana<=4;coloana++)
+                      {
+                        matrice[1][coloana].valoare=matrice[1][coloana+1].valoare;
+                      }
+                    matrice[1][5].valoare=3;
+                    alternare++;
+                  }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
             }
+            else if(matrice[1][u].valoare==4)
+              {
+                for(let coloana=u;coloana<=4;coloana++)
+                  {
+                    matrice[1][coloana].valoare=matrice[1][coloana+1].valoare;
+                  }
+                matrice[1][5].valoare=2;
+                alternare++;
+              }
+              else if(matrice[1][u].valoare==5)
+                {
+                  for(let coloana=u;coloana<=4;coloana++)
+                    {
+                      matrice[1][coloana].valoare=matrice[1][coloana+1].valoare;
+                    }
+                  matrice[1][5].valoare=3;
+                  alternare++;
+                }
           else if(matrice[u+1][5].valoare==1)
             {
+<<<<<<< HEAD
               matrice[u+1][5].valoare=0;
               if (alternare%2 == 0)
                 {
@@ -95,6 +292,45 @@ function ifSquare15()
                   alternare++;
             }
             
+=======
+              if (alternare%2 == 0)
+                {
+                  for(let linia=u+1;linia>=2;linia--)
+                    {
+                      matrice[linia][5].valoare=matrice[linia-1][5].valoare;
+                    }
+                  matrice[1][5].valoare=2;
+                  alternare++;
+                }
+                else if (alternare%2 != 0)
+                  {
+                    for(let linia=u+1;linia>=2;linia--)
+                      {
+                        matrice[linia][5].valoare=matrice[linia-1][5].valoare;
+                      }
+                    matrice[1][5].valoare=3;
+                    alternare++;
+                  }
+            }
+            else if(matrice[u+1][5].valoare==4)
+              {
+                for(let linia=u+1;linia>=2;linia--)
+                  {
+                    matrice[linia][5].valoare=matrice[linia-1][5].valoare;
+                  }
+                matrice[1][5].valoare=2;
+                alternare++;
+              }
+              else if(matrice[u+1][5].valoare==5)
+                {
+                  for(let linia=u+1;linia>=2;linia--)
+                    {
+                      matrice[linia][5].valoare=matrice[linia-1][5].valoare;
+                    }
+                  matrice[1][5].valoare=3;
+                  alternare++;
+                }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
         }
 }
 function ifSquare55()
@@ -103,6 +339,7 @@ function ifSquare55()
         {
           if(matrice[5][u].valoare==1)
             {
+<<<<<<< HEAD
               matrice[5][u].valoare=0;
               if (alternare%2 == 0)
                 {
@@ -113,9 +350,48 @@ function ifSquare55()
                     matrice[5][5].valoare=3;
                   }
                   alternare++;
+=======
+              if (alternare%2 == 0)
+                {
+                  for(let coloana=u;coloana<=4;coloana++)
+                    {
+                      matrice[5][coloana].valoare=matrice[5][coloana+1].valoare;
+                    }
+                  matrice[5][5].valoare=2;
+                  alternare++;
+                }
+                else if (alternare%2 != 0)
+                  {
+                    for(let coloana=u;coloana<=4;coloana++)
+                      {
+                        matrice[5][coloana].valoare=matrice[5][coloana+1].valoare;
+                      }
+                    matrice[5][5].valoare=3;
+                    alternare++;
+                  }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
             }
+          else if(matrice[5][u].valoare==4)
+            {
+              for(let coloana=u;coloana<=4;coloana++)
+                {
+                  matrice[5][coloana].valoare=matrice[5][coloana+1].valoare;
+                }
+              matrice[5][5].valoare=2;
+              alternare++;
+            }
+            else if(matrice[5][u].valoare==5)
+              {
+                for(let coloana=u;coloana<=4;coloana++)
+                  {
+                    matrice[5][coloana].valoare=matrice[5][coloana+1].valoare;
+                  }
+                matrice[5][5].valoare=3;
+                alternare++;
+              }  
           else if(matrice[u][5].valoare==1)
             {
+<<<<<<< HEAD
               matrice[u][5].valoare=0;
               if (alternare%2 == 0)
                 {
@@ -129,12 +405,53 @@ function ifSquare55()
             }
             
         }
+=======
+              if (alternare%2 == 0)
+                {
+                  for(let linia=u;linia<=4;linia++)
+                    {
+                      matrice[linia][5].valoare=matrice[linia+1][5].valoare;
+                    }
+                  matrice[5][5].valoare=2;
+                  alternare++;
+                }
+                else if (alternare%2 != 0)
+                  {
+                    for(let linia=u;linia<=4;linia++)
+                      {
+                        matrice[linia][5].valoare=matrice[linia+1][5].valoare;
+                      }
+                    matrice[5][5].valoare=3;
+                    alternare++;
+                  }
+            }
+            else if(matrice[u][5].valoare==4)
+              {
+                for(let linia=u;linia<=4;linia++)
+                  {
+                    matrice[linia][5].valoare=matrice[linia+1][5].valoare;
+                  }
+                matrice[5][5].valoare=2;
+                alternare++;
+              }
+              else if(matrice[u][5].valoare==5)
+                {
+                  for(let linia=u;linia<=4;linia++)
+                    {
+                      matrice[linia][5].valoare=matrice[linia+1][5].valoare;
+                    }
+                  matrice[5][5].valoare=3;
+                  alternare++;
+                }
+            }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
 }
 // verify if we have a selected square in the designated spot for rows and columns
 function ifRow1()
 {
-  if(mouseX>=matrice[1][2].coordonataX && mouseX<=matrice[1][3].coordonataX && matrice[5][2].valoare==1)
+  if(mouseX>=matrice[1][2].coordonataX && mouseX<=matrice[1][3].coordonataX)
     {
+<<<<<<< HEAD
       matrice[5][2].valoare=0;
       if (alternare%2 == 0)
         {
@@ -145,9 +462,51 @@ function ifRow1()
             matrice[1][2].valoare=3;
           }
           alternare++;
+=======
+      if(matrice[5][2].valoare==1)
+      {
+        if (alternare%2 == 0)
+          {
+            for(let linia=4;linia>=1;linia--)
+              {
+                matrice[linia+1][2].valoare=matrice[linia][2].valoare;
+              }
+            matrice[1][2].valoare=2;
+            alternare++;
+          }
+          else if (alternare%2 != 0)
+            {
+              for(let linia=4;linia>=1;linia--)
+                {
+                  matrice[linia+1][2].valoare=matrice[linia][2].valoare;
+                }
+              matrice[1][2].valoare=3;
+              alternare++;
+            }
+      }
+      else if(matrice[5][2].valoare==4)
+        {
+          for(let linia=4;linia>=1;linia--)
+            {
+              matrice[linia+1][2].valoare=matrice[linia][2].valoare;
+            }
+          matrice[1][2].valoare=2;
+          alternare++;
+        }
+        else if(matrice[5][2].valoare==5)
+          {
+            for(let linia=4;linia>=1;linia--)
+              {
+                matrice[linia+1][2].valoare=matrice[linia][2].valoare;
+              }
+            matrice[1][2].valoare=3;
+            alternare++;
+          }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
     }
-  else if(mouseX>=matrice[1][3].coordonataX && mouseX<=matrice[1][4].coordonataX && matrice[5][3].valoare==1)
+  else if(mouseX>=matrice[1][3].coordonataX && mouseX<=matrice[1][4].coordonataX)
     {
+<<<<<<< HEAD
       matrice[5][3].valoare=0;
       if (alternare%2 == 0)
         {
@@ -158,9 +517,51 @@ function ifRow1()
             matrice[1][3].valoare=3;
           }
           alternare++;
+=======
+      if(matrice[5][3].valoare==1)
+        {
+          if (alternare%2 == 0)
+            {
+              for(let linia=4;linia>=1;linia--)
+                {
+                  matrice[linia+1][3].valoare=matrice[linia][3].valoare;
+                }
+              matrice[1][3].valoare=2;
+              alternare++;
+            }
+            else if (alternare%2 != 0)
+              {
+                for(let linia=4;linia>=1;linia--)
+                  {
+                    matrice[linia+1][3].valoare=matrice[linia][3].valoare;
+                  }
+                matrice[1][3].valoare=3;
+                alternare++;
+              }
+        }
+        else if(matrice[5][3].valoare==4)
+          {
+            for(let linia=4;linia>=1;linia--)
+              {
+                matrice[linia+1][3].valoare=matrice[linia][3].valoare;
+              }
+            matrice[1][3].valoare=2;
+            alternare++;
+          }
+          else if(matrice[5][3].valoare==5)
+            {
+              for(let linia=4;linia>=1;linia--)
+                {
+                  matrice[linia+1][3].valoare=matrice[linia][3].valoare;
+                }
+              matrice[1][3].valoare=3;
+              alternare++;
+            }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
     }
-  else if(mouseX>=matrice[1][4].coordonataX && mouseX<=matrice[1][5].coordonataX && matrice[5][4].valoare==1)
+  else if(mouseX>=matrice[1][4].coordonataX && mouseX<=matrice[1][5].coordonataX)
     {
+<<<<<<< HEAD
       matrice[5][4].valoare=0;
       if (alternare%2 == 0)
         {
@@ -171,12 +572,54 @@ function ifRow1()
             matrice[1][4].valoare=3;
           }
           alternare++;
+=======
+      if(matrice[5][4].valoare==1)
+      {
+        if (alternare%2 == 0)
+          {
+            for(let linia=4;linia>=1;linia--)
+              {
+                matrice[linia+1][4].valoare=matrice[linia][4].valoare;
+              }
+            matrice[1][4].valoare=2;
+            alternare++;
+          }
+          else if (alternare%2 != 0)
+            {
+              for(let linia=4;linia>=1;linia--)
+                {
+                  matrice[linia+1][4].valoare=matrice[linia][4].valoare;
+                }
+              matrice[1][4].valoare=3;
+              alternare++;
+            }
+      }
+      else if(matrice[5][4].valoare==4)
+        {
+          for(let linia=4;linia>=1;linia--)
+            {
+              matrice[linia+1][4].valoare=matrice[linia][4].valoare;
+            }
+          matrice[1][4].valoare=2;
+          alternare++;
+        }
+        else if(matrice[5][4].valoare==5)
+          {
+            for(let linia=4;linia>=1;linia--)
+              {
+                matrice[linia+1][4].valoare=matrice[linia][4].valoare;
+              }
+            matrice[1][4].valoare=3;
+            alternare++;
+          }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
     }
 }
 function ifRow5()
 {
-  if(mouseX>=matrice[5][2].coordonataX && mouseX<=matrice[5][3].coordonataX && matrice[1][2].valoare==1)
+  if(mouseX>=matrice[5][2].coordonataX && mouseX<=matrice[5][3].coordonataX)
     {
+<<<<<<< HEAD
       matrice[1][2].valoare=0;
       if (alternare%2 == 0)
         {
@@ -187,9 +630,51 @@ function ifRow5()
             matrice[5][2].valoare=3;
           }
           alternare++;
+=======
+      if(matrice[1][2].valoare==1)
+        {
+          if (alternare%2 == 0)
+            {
+              for(let linia=1;linia<=4;linia++)
+                {
+                  matrice[linia][2].valoare=matrice[linia+1][2].valoare;
+                }
+              matrice[5][2].valoare=2;
+              alternare++;
+            }
+            else if (alternare%2 != 0)
+              {
+                for(let linia=1;linia<=4;linia++)
+                  {
+                    matrice[linia][2].valoare=matrice[linia+1][2].valoare;
+                  }
+                matrice[5][2].valoare=3;
+                alternare++;
+              }
+        }
+        else if(matrice[1][2].valoare==4)
+          {
+            for(let linia=1;linia<=4;linia++)
+              {
+                matrice[linia][2].valoare=matrice[linia+1][2].valoare;
+              }
+            matrice[5][2].valoare=2;
+            alternare++;
+          }
+          else if(matrice[1][2].valoare==5)
+            {
+              for(let linia=1;linia<=4;linia++)
+                {
+                  matrice[linia][2].valoare=matrice[linia+1][2].valoare;
+                }
+              matrice[5][2].valoare=3;
+              alternare++;
+            }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
     }
-  else if(mouseX>=matrice[5][3].coordonataX && mouseX<=matrice[5][4].coordonataX && matrice[1][3].valoare==1)
+  else if(mouseX>=matrice[5][3].coordonataX && mouseX<=matrice[5][4].coordonataX)
     {
+<<<<<<< HEAD
       matrice[1][3].valoare=0;
       if (alternare%2 == 0)
         {
@@ -200,9 +685,51 @@ function ifRow5()
             matrice[5][3].valoare=3;
           }
           alternare++;
+=======
+      if(matrice[1][3].valoare==1)
+        {
+          if (alternare%2 == 0)
+            {
+              for(let linia=1;linia<=4;linia++)
+                {
+                  matrice[linia][3].valoare=matrice[linia+1][3].valoare;
+                }
+              matrice[5][3].valoare=2;
+              alternare++;
+            }
+            else if (alternare%2 != 0)
+              {
+                for(let linia=1;linia<=4;linia++)
+                  {
+                    matrice[linia][3].valoare=matrice[linia+1][3].valoare;
+                  }
+                matrice[5][3].valoare=3;
+                alternare++;
+              }
+        }
+        else if(matrice[1][3].valoare==4)
+          {
+            for(let linia=1;linia<=4;linia++)
+              {
+                matrice[linia][3].valoare=matrice[linia+1][3].valoare;
+              }
+            matrice[5][3].valoare=2;
+            alternare++;
+          }
+          else if(matrice[1][3].valoare==5)
+            {
+              for(let linia=1;linia<=4;linia++)
+                {
+                  matrice[linia][3].valoare=matrice[linia+1][3].valoare;
+                }
+              matrice[5][3].valoare=3;
+              alternare++;
+            }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
     }
-  else if(mouseX>=matrice[5][4].coordonataX && mouseX<=matrice[5][5].coordonataX && matrice[1][4].valoare==1)
+  else if(mouseX>=matrice[5][4].coordonataX && mouseX<=matrice[5][5].coordonataX)
     {
+<<<<<<< HEAD
       matrice[1][4].valoare=0;
       if (alternare%2 == 0)
         {
@@ -213,12 +740,54 @@ function ifRow5()
             matrice[5][4].valoare=3;
           }
           alternare++;
+=======
+      if(matrice[1][4].valoare==1)
+        {
+          if (alternare%2 == 0)
+            {
+              for(let linia=1;linia<=4;linia++)
+                {
+                  matrice[linia][4].valoare=matrice[linia+1][4].valoare;
+                }
+              matrice[5][4].valoare=2;
+              alternare++;
+            }
+            else if (alternare%2 != 0)
+              {
+                for(let linia=1;linia<=4;linia++)
+                  {
+                    matrice[linia][4].valoare=matrice[linia+1][4].valoare;
+                  }
+                matrice[5][4].valoare=3;
+                alternare++;
+              }
+        }
+        else if(matrice[1][4].valoare==4)
+          {
+            for(let linia=1;linia<=4;linia++)
+              {
+                matrice[linia][4].valoare=matrice[linia+1][4].valoare;
+              }
+            matrice[5][4].valoare=2;
+            alternare++;
+          }
+          else if(matrice[1][4].valoare==5)
+            {
+              for(let linia=1;linia<=4;linia++)
+                {
+                  matrice[linia][4].valoare=matrice[linia+1][4].valoare;
+                }
+              matrice[5][4].valoare=3;
+              alternare++;
+            }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
     }
 }
 function ifColumn1()
 {
-  if(mouseY>=matrice[2][1].coordonataY && mouseY<=matrice[3][1].coordonataY && matrice[2][5].valoare==1)
+  if(mouseY>=matrice[2][1].coordonataY && mouseY<=matrice[3][1].coordonataY)
     {
+<<<<<<< HEAD
       matrice[2][5].valoare=0;
       if (alternare%2 == 0)
         {
@@ -229,9 +798,51 @@ function ifColumn1()
             matrice[2][1].valoare=3;
           }
           alternare++;
+=======
+      if(matrice[2][5].valoare==1)
+      {
+        if (alternare%2 == 0)
+          {
+            for(let coloana=5;coloana>=2;coloana--)
+              {
+                matrice[2][coloana].valoare=matrice[2][coloana-1].valoare;
+              }
+            matrice[2][1].valoare=2;
+            alternare++;
+          }
+          else if (alternare%2 != 0)
+            {
+              for(let coloana=5;coloana>=2;coloana--)
+                {
+                  matrice[2][coloana].valoare=matrice[2][coloana-1].valoare;
+                }
+              matrice[2][1].valoare=3;
+              alternare++;
+            }
+      }
+      else if(matrice[2][5].valoare==4)
+        {
+          for(let coloana=5;coloana>=2;coloana--)
+            {
+              matrice[2][coloana].valoare=matrice[2][coloana-1].valoare;
+            }
+          matrice[2][1].valoare=2;
+          alternare++;
+        }
+        else if(matrice[2][5].valoare==5)
+          {
+            for(let coloana=5;coloana>=2;coloana--)
+              {
+                matrice[2][coloana].valoare=matrice[2][coloana-1].valoare;
+              }
+            matrice[2][1].valoare=3;
+            alternare++;
+          }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
     }
-  else if(mouseY>=matrice[3][1].coordonataY && mouseY<=matrice[4][1].coordonataY && matrice[3][5].valoare==1)
+  else if(mouseY>=matrice[3][1].coordonataY && mouseY<=matrice[4][1].coordonataY)
     {
+<<<<<<< HEAD
       matrice[3][5].valoare=0;
       if (alternare%2 == 0)
               {
@@ -242,9 +853,51 @@ function ifColumn1()
                   matrice[3][1].valoare=3;
                 }
                 alternare++;
+=======
+      if(matrice[3][5].valoare==1)
+        {
+          if (alternare%2 == 0)
+            {
+              for(let coloana=5;coloana>=2;coloana--)
+                {
+                  matrice[3][coloana].valoare=matrice[3][coloana-1].valoare;
+                }
+              matrice[3][1].valoare=2;
+              alternare++;
+            }
+            else if (alternare%2 != 0)
+              {
+                for(let coloana=5;coloana>=2;coloana--)
+                  {
+                    matrice[3][coloana].valoare=matrice[3][coloana-1].valoare;
+                  }
+                matrice[3][1].valoare=3;
+                alternare++;
+              }
+        }
+        else if(matrice[3][5].valoare==4)
+          {
+            for(let coloana=5;coloana>=2;coloana--)
+              {
+                matrice[3][coloana].valoare=matrice[3][coloana-1].valoare;
+              }
+            matrice[3][1].valoare=2;
+            alternare++;
+          }
+          else if(matrice[3][5].valoare==5)
+            {
+              for(let coloana=5;coloana>=2;coloana--)
+                {
+                  matrice[3][coloana].valoare=matrice[3][coloana-1].valoare;
+                }
+              matrice[3][1].valoare=3;
+              alternare++;
+            }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
     }
-  else if(mouseY>=matrice[4][1].coordonataY && mouseY<=matrice[5][1].coordonataY && matrice[4][5].valoare==1)
+  else if(mouseY>=matrice[4][1].coordonataY && mouseY<=matrice[5][1].coordonataY)
     {
+<<<<<<< HEAD
       matrice[4][5].valoare=0;
       if (alternare%2 == 0)
         {
@@ -255,12 +908,54 @@ function ifColumn1()
             matrice[4][1].valoare=3;
           }
           alternare++;
+=======
+      if(matrice[4][5].valoare==1)
+        {
+          if (alternare%2 == 0)
+            {
+              for(let coloana=5;coloana>=2;coloana--)
+                {
+                  matrice[4][coloana].valoare=matrice[4][coloana-1].valoare;
+                }
+              matrice[4][1].valoare=2;
+              alternare++;
+            }
+            else if (alternare%2 != 0)
+              {
+                for(let coloana=5;coloana>=2;coloana--)
+                  {
+                    matrice[4][coloana].valoare=matrice[4][coloana-1].valoare;
+                  }
+                matrice[4][1].valoare=3;
+                alternare++;
+              }
+        }
+        else if(matrice[4][5].valoare==4)
+          {
+            for(let coloana=5;coloana>=2;coloana--)
+              {
+                matrice[4][coloana].valoare=matrice[4][coloana-1].valoare;
+              }
+            matrice[4][1].valoare=2;
+            alternare++;
+          }
+          else if(matrice[4][5].valoare==5)
+            {
+              for(let coloana=5;coloana>=2;coloana--)
+                {
+                  matrice[4][coloana].valoare=matrice[4][coloana-1].valoare;
+                }
+              matrice[4][1].valoare=3;
+              alternare++;
+            }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
     }
 }
-function ifColumn5()
+function ifColumn5()  
 {
-  if(mouseY>=matrice[2][5].coordonataY && mouseY<=matrice[3][5].coordonataY && matrice[2][1].valoare==1)
+  if(mouseY>=matrice[2][5].coordonataY && mouseY<=matrice[3][5].coordonataY)
     {
+<<<<<<< HEAD
       matrice[2][1].valoare=0;
       if (alternare%2 == 0)
         {
@@ -271,9 +966,51 @@ function ifColumn5()
             matrice[2][5].valoare=3;
           }
           alternare++;
+=======
+      if(matrice[2][1].valoare==1)
+        {
+          if (alternare%2 == 0)
+            {
+              for(let coloana=1;coloana<=4;coloana++)
+                {
+                  matrice[2][coloana].valoare=matrice[2][coloana+1].valoare;
+                }
+              matrice[2][5].valoare=2;
+              alternare++;
+            }
+            else if (alternare%2 != 0)
+              {
+                for(let coloana=1;coloana<=4;coloana++)
+                  {
+                    matrice[2][coloana].valoare=matrice[2][coloana+1].valoare;
+                  }
+                matrice[2][5].valoare=3;
+                alternare++;
+              }
+        }
+        else if(matrice[2][1].valoare==4)
+          {
+            for(let coloana=1;coloana<=4;coloana++)
+              {
+                matrice[2][coloana].valoare=matrice[2][coloana+1].valoare;
+              }
+            matrice[2][5].valoare=2;
+            alternare++;
+          }
+          else if(matrice[2][1].valoare==5)
+            {
+              for(let coloana=1;coloana<=4;coloana++)
+                {
+                  matrice[2][coloana].valoare=matrice[2][coloana+1].valoare;
+                }
+              matrice[2][5].valoare=3;
+              alternare++;
+            }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
     }
-  else if(mouseY>=matrice[3][5].coordonataY && mouseY<=matrice[4][5].coordonataY && matrice[3][1].valoare==1)
+  else if(mouseY>=matrice[3][5].coordonataY && mouseY<=matrice[4][5].coordonataY)
     {
+<<<<<<< HEAD
       matrice[3][1].valoare=0;
       if (alternare%2 == 0)
         {
@@ -284,9 +1021,51 @@ function ifColumn5()
             matrice[3][5].valoare=3;
           }
           alternare++;
+=======
+      if(matrice[3][1].valoare==1)
+        {
+          if (alternare%2 == 0)
+            {
+              for(let coloana=1;coloana<=4;coloana++)
+                {
+                  matrice[3][coloana].valoare=matrice[3][coloana+1].valoare;
+                }
+              matrice[3][5].valoare=2;
+              alternare++;
+            }
+            else if (alternare%2 != 0)
+              {
+                for(let coloana=1;coloana<=4;coloana++)
+                  {
+                    matrice[3][coloana].valoare=matrice[3][coloana+1].valoare;
+                  }
+                matrice[3][5].valoare=3;
+                alternare++;
+              }
+        }
+        else if(matrice[3][1].valoare==4)
+          {
+            for(let coloana=1;coloana<=4;coloana++)
+              {
+                matrice[3][coloana].valoare=matrice[3][coloana+1].valoare;
+              }
+            matrice[3][5].valoare=2;
+            alternare++;
+          }
+          else if(matrice[3][1].valoare==5)
+            {
+              for(let coloana=1;coloana<=4;coloana++)
+                {
+                  matrice[3][coloana].valoare=matrice[3][coloana+1].valoare;
+                }
+              matrice[3][5].valoare=3;
+              alternare++;
+            }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
     }
-  else if(mouseY>=matrice[4][5].coordonataY && mouseY<=matrice[5][5].coordonataY && matrice[4][1].valoare==1)
+  else if(mouseY>=matrice[4][5].coordonataY && mouseY<=matrice[5][5].coordonataY)
     {
+<<<<<<< HEAD
       matrice[4][1].valoare=0;
       if (alternare%2 == 0)
         {
@@ -297,26 +1076,79 @@ function ifColumn5()
             matrice[4][5].valoare=3;
           }
           alternare++;
+=======
+      if(matrice[4][1].valoare==1)
+      {
+        if (alternare%2 == 0)
+          {
+            for(let coloana=1;coloana<=4;coloana++)
+              {
+                matrice[4][coloana].valoare=matrice[4][coloana+1].valoare;
+              }
+            matrice[4][5].valoare=2;
+            alternare++;
+          }
+          else if (alternare%2 != 0)
+            {
+              for(let coloana=1;coloana<=4;coloana++)
+                {
+                  matrice[4][coloana].valoare=matrice[4][coloana+1].valoare;
+                }
+              matrice[4][5].valoare=3;
+              alternare++;
+            }
+      }
+      else if(matrice[4][1].valoare==4)
+        {
+          for(let coloana=1;coloana<=4;coloana++)
+            {
+              matrice[4][coloana].valoare=matrice[4][coloana+1].valoare;
+            }
+          matrice[4][5].valoare=2;
+          alternare++;
+        }
+        else if(matrice[4][1].valoare==5)
+          {
+            for(let coloana=1;coloana<=4;coloana++)
+              {
+                matrice[4][coloana].valoare=matrice[4][coloana+1].valoare;
+              }
+            matrice[4][5].valoare=3;
+            alternare++;
+          }
+>>>>>>> c594bdfd114f2cb6d53ec8be26f45838459481bc
     }
 }
 function untouchedBox()
 {
-  let a=0;
-  if(matrice[i][j].valoare==0)
+  let verificareSelectare=0;
+  if(matrice[i][j].valoare==0 || matrice[i][j].valoare==2 || matrice[i][j].valoare==3) 
     {
       for (k = 1; k <= 5; k++) 
         {
           for (m = 1; m <= 5; m++) 
             {
-              if(matrice[k][m].valoare==1)
+              if(matrice[k][m].valoare==1 || matrice[k][m].valoare==4 || matrice[k][m].valoare==5)
                 {
-                  a++;
+                  verificareSelectare++;
                 }
             }
         }
-        if(a==0)
+        if(verificareSelectare==0)
           {
-            matrice[i][j].valoare=1;
+           if(matrice[i][j].valoare==0)
+            {
+              matrice[i][j].valoare=1;
+            }
+            else if(matrice[i][j].valoare==2 && alternare%2==0)
+            {
+              matrice[i][j].valoare=4;
+            }
+            else if(matrice[i][j].valoare==3 && alternare%2!=0)
+            {
+              matrice[i][j].valoare=5;
+            }
           }
       }
+      verificareSelectare=0;
 }
