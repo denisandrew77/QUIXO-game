@@ -1,7 +1,11 @@
 function randomMove()
 {
-    let liniaSelectata;
-    let coloanaSelectata;
+    let coordonateleMutarii={
+        liniaSelectata:0,
+        coloanaSelectata:0,
+        x:0,
+        y:0,
+    }
     // patratul selectat
     // 1 pentru linie
     // 2 pentru coloana
@@ -11,12 +15,12 @@ function randomMove()
         let linia1sau5=random([1,5]);
         if(linia1sau5==1)
         {
-            liniaSelectata=1;
-            coloanaSelectata=random([1,2,3,4,5]);
+            coordonateleMutarii.liniaSelectata=1;
+            coordonateleMutarii.coloanaSelectata=random([1,2,3,4,5]);
         }
         else if(linia1sau5==5)
         {
-            liniaSelectata=5;
+            coordonateleMutarii.liniaSelectata=5;
             coloanaSelectata=random([1,2,3,4,5]);
         }
     }
@@ -25,21 +29,17 @@ function randomMove()
        let coloana1sau5=random([1,5]);
        if(coloana1sau5==1)
         {
-            liniaSelectata=random([1,2,3,4,5]);
-            coloanaSelectata=1;
+            coordonateleMutarii.liniaSelectata=random([1,2,3,4,5]);
+            coordonateleMutarii.coloanaSelectata=1;
         }
         else if(coloana1sau5==5)
         {
-            liniaSelectata=random([1,2,3,4,5]);
-            coloanaSelectata=5;
+            coordonateleMutarii.liniaSelectata=random([1,2,3,4,5]);
+            coordonateleMutarii.coloanaSelectata=5;
         }
     }
-    let coordonateleMutarii={
-        x:0,
-        y:0,
-    }
     // patratul mutat
-    if((liniaSelectata==1 && coloanaSelectata==1) || (liniaSelectata==5 && coloanaSelectata==5))
+    if((coordonateleMutarii.liniaSelectata==1 && coordonateleMutarii.coloanaSelectata==1) || (coordonateleMutarii.liniaSelectata==5 && coordonateleMutarii.coloanaSelectata==5))
     {
         let patrat51SauPatrat15=random([1,2]);
         if(patrat51SauPatrat15==1)

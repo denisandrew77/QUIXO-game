@@ -3,13 +3,117 @@ let dimensiuneBloc = 98.8;
 let coordonatePunctStart = 103;
 let buton;
 let caseta1, caseta2;
-let alternare=1; 
-
+let butonJocRandom;
+let alternare=1;
+let castig;
+const functieVerificareCombinatieCastigatorare=function ()
+{
+  let verifyX=0;
+  let verify0=0;
+  for(let i=1;i<=5;i++)
+    {
+        for(let j=1;j<=5;j++)
+        {
+          if(matrice[i][j].valoare==2)
+            {
+              verifyX++;
+            }
+          else if(matrice[i][j].valoare==3)
+            {
+              verify0++;
+            }
+        }
+        if(verifyX==5)
+          {
+            return 2;
+          }
+        else if(verify0==5)
+          {
+            return 3;
+          }
+          verifyX=0;
+          verify0=0;
+    }
+    for(let i=1;i<=5;i++)
+        {
+            for(let j=1;j<=5;j++)
+            {
+              if(matrice[j][i].valoare==2)
+                {
+                  verifyX++;
+                }
+              else if(matrice[j][i].valoare==3)
+                {
+                  verify0++;
+                }
+            }
+            if(verifyX==5)
+              {
+                return 2;
+              }
+            else if(verify0==5)
+              {
+                return 3;
+              }
+              verifyX=0;
+              verify0=0;
+        }
+        let i=1;
+        let j=1;
+  while(i<=5 && j<=5)
+  {
+    if(matrice[i][j].valoare==2)
+      {
+        verifyX++;
+      }
+    else if(matrice[i][j].valoare==3)
+      {
+        verify0++;
+      }
+      i++;
+      j++;
+  }
+  if(verifyX==5)
+    {
+      return 2;
+    }
+  else if(verify0==5)
+    {
+      return 3;
+    }
+    verifyX=0;
+    verify0=0;
+    i=1;
+    j=1;
+    while(i>=1 && j>=1)
+        {
+          if(matrice[i][j].valoare==2)
+            {
+              verifyX++;
+            }
+          else if(matrice[i][j].valoare!=3)
+            {
+              verify0++;
+            }
+            i++;
+            j--;
+        }
+        if(verifyX==2)
+          {
+            return 2;
+          }
+        else if(verify0==3)
+          {
+            return 3;
+          }
+    return 0;
+}
 function setup() {
   createCanvas(900, 700);
   buton = createButton('Joc Nou');
   buton.position(750, 20);
   buton.mousePressed(resetareJoc);
+  
 
   caseta1 = createInput();
   caseta1.position(750, 80);
@@ -21,6 +125,7 @@ function setup() {
   caseta2.attribute('placeholder', 'Jucătorul 2');
   caseta2.size(120, 20);
 
+  
   resetareJoc();
 }
 
@@ -38,6 +143,7 @@ function resetareJoc() {
   caseta1.value('');
   caseta2.value('');
   alternare=0;
+  text('Joc in desfasurare',600,650);
 }
 
 function mousePressed() 
@@ -92,6 +198,7 @@ function mousePressed()
         }
       }
     }
+    castig=functieVerificareCombinatieCastigatorare();
   }
 }
 
@@ -100,7 +207,7 @@ function draw() {
   casetaJucatorul2();
   butonJocNou();
   tablaDeJoc();
-  let a=1;
+  
   for (i = 1; i <= 5; i++) 
   {
     for (j = 1; j <= 5; j++) 
@@ -150,8 +257,19 @@ function draw() {
       else {
         fill(232, 189, 124);
         rect(matrice[i][j].coordonataX, matrice[i][j].coordonataY, dimensiuneBloc, dimensiuneBloc);
+        if(castig==2 || castig==2)
+          {
+            text('X',600,650);
+          }
+          else if(castig==3 || castig==3)
+            {
+              text('0',600,650);
+            }
+            else
+            {
+              text('Joc in desfasurare',600,650);
+            }
       }
-      a++;
     }
   }
 }
